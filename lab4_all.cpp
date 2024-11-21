@@ -107,7 +107,20 @@ int main() {
 
     Money result = money1 - money2;
 
-    std::cout << "результат: " << result << std::endl;
+    std::cout << "Результат вычитания двух сумм: " << result << std::endl;
 
-    return 0;
+    ++money1;
+    --money2;
+
+    std::cout << "Сумма1 после увеличения: " << money1 << std::endl;
+    std::cout << "Сумма2 после уменьшения: " << money2 << std::endl;
+
+    unsigned int rubles1 = money1;
+    double kopeks2 = static_cast<double>(money2);
+
+    std::cout << "Сумма1 в рублях: " << rubles1 << std::endl;
+    std::cout << "Сумма2 в копейках как десятичная дробь: " << kopeks2 << std::endl;
+
+return 0;
+
 }
