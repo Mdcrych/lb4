@@ -84,6 +84,7 @@ public:
 };
 
 int main() {
+    setlocale(LC_ALL, "Russian");
     unsigned int rub1, rub2, rub3;
     short int kop1, kop2, kop3;
 
