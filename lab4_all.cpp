@@ -99,7 +99,7 @@ int main() {
     std::cout << "Копейки: ";
     std::cin >> kop2;
 
-    std::cout << "Введите вторую сумму денег:" << std::endl;
+    std::cout << "Введите третью сумму денег:" << std::endl;
     std::cout << "Рубли: ";
     std::cin >> rub3;
     std::cout << "Копейки: ";
@@ -107,15 +107,16 @@ int main() {
 
     Money money1(rub1, kop1);
     Money money2(rub2, kop2);
-    Money money2(rub3, kop3);
+    Money money3(rub3, kop3);
 
     std::cout << "Сумма1: " << money1 << std::endl;
     std::cout << "Сумма2: " << money2 << std::endl;
     std::cout << "Сумма2: " << money3 << std::endl;
 
-    Money result = money1 - money2 + money3;
-
-    std::cout << "Результат вычитания двух сумм: " << result << std::endl;
+    Money result1 = money1 - money2;
+    Money result2 = money1 - money3;
+    std::cout << "Результат вычитания двух первых сумм: " << result1 << std::endl;
+    std::cout << "Результат вычитания первой и третьей суммы: " << result2 << std::endl;
 
     ++money1;
     --money2;
