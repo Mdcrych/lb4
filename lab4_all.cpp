@@ -84,8 +84,8 @@ public:
 };
 
 int main() {
-    unsigned int rub1, rub2;
-    short int kop1, kop2;
+    unsigned int rub1, rub2, rub3;
+    short int kop1, kop2, kop3;
 
     std::cout << "Введите первую сумму денег:" << std::endl;
     std::cout << "Рубли: ";
@@ -99,27 +99,39 @@ int main() {
     std::cout << "Копейки: ";
     std::cin >> kop2;
 
+    std::cout << "Введите вторую сумму денег:" << std::endl;
+    std::cout << "Рубли: ";
+    std::cin >> rub3;
+    std::cout << "Копейки: ";
+    std::cin >> kop3;
+
     Money money1(rub1, kop1);
     Money money2(rub2, kop2);
+    Money money2(rub3, kop3);
 
     std::cout << "Сумма1: " << money1 << std::endl;
     std::cout << "Сумма2: " << money2 << std::endl;
+    std::cout << "Сумма2: " << money3 << std::endl;
 
-    Money result = money1 - money2;
+    Money result = money1 - money2 + money3;
 
     std::cout << "Результат вычитания двух сумм: " << result << std::endl;
 
     ++money1;
     --money2;
+    ++money3;
 
     std::cout << "Сумма1 после увеличения: " << money1 << std::endl;
     std::cout << "Сумма2 после уменьшения: " << money2 << std::endl;
+    std::cout << "Сумма3 после увеличения: " << money3 << std::endl;
 
     unsigned int rubles1 = money1;
     double kopeks2 = static_cast<double>(money2);
+    double kopeks3 = static_cast<double>(money3);
 
     std::cout << "Сумма1 в рублях: " << rubles1 << std::endl;
     std::cout << "Сумма2 в копейках как десятичная дробь: " << kopeks2 << std::endl;
+    std::cout << "Сумма3 в копейках как десятичная дробь: " << kopeks3 << std::endl;
 
 return 0;
 
